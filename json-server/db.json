@@ -1,0 +1,14 @@
+{
+  "employees":[
+    {
+      "id":1,
+      "name":"rushi",
+      "age":"23",
+      "gender":"male",
+      "mobile":7774962961,
+      "image":"",
+      "department":"civil",
+      "salary":54692
+  }
+  ]
+}
