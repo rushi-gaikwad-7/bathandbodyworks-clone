@@ -28,7 +28,7 @@ function Pro() {
   const { id } = useParams();
   useEffect(() => {
     const getData = async () => {
-      let response = await fetch(`http://localhost:8080/candle/${id}`);
+      let response = await fetch(`https://bbw-mock-json-server.herokuapp.com/candle/${id}`);
       let data1 = await response.json();
       setData(data1);
     };

@@ -1,9 +1,10 @@
 import styles from "../css/profile.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import React, { useState } from "react";
 import signupData from "../data/signup.json";
 export const Profile = () => {
+  const navigate = useNavigate();
   let data = signupData.signupData;
   const [toggle, settoggle] = useState(true);
   const [inpuType, setInputType] = useState("password");
@@ -16,27 +17,68 @@ export const Profile = () => {
       setInputType("text");
     }
   };
-  const handleLogin=(event)=>{
+  const handleLogin = (e) => {
+    e.preventDefault();
 
-  }
-  const handleSignup=(event)=>{
-    const mail=event.target.Email.value;
-    const password= event.target.password.value;
-    event.preventDefault();
-    console.log("hello")
- 
-  axios.post('https://reqres.in/api/register', {
-    "email": mail,
-    "password": password
-})
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-  setProfile(true)
-  }
+    const username = e.target.mail.value;
+    const password = e.target.password.value;
+    console.log(username,password)
+    if (username && password) {
+      axios
+        .post("https://masai-api-mocker.herokuapp.com/auth/login", {
+          username,
+          password,
+        })
+        .then(function (response) {
+          console.log(response);
+          navigate("/");
+        })
+        .catch(function (error) {
+          console.log(error);
+          alert("fill correct email & password");
+        });
+    } else {
+      alert("fill all details");
+    }
+  };
+  const handleSignup = (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const username = e.target.cmEmail.value;
+    const password = e.target.password.value;
+    const mobile = e.target.mobile.value;
+    const description = "";
+    if (name && email && username && password && mobile) {
+      if (username == email) {
+        axios
+          .post("https://masai-api-mocker.herokuapp.com/auth/register", {
+            name,
+            email,
+            username,
+            password,
+            mobile,
+            description,
+          })
+          .then(function (response) {
+            if(response.error){
+              alert(response.massage)
+            }
+            else{
+            setProfile(true);
+            }
+          })
+          .catch(function (error) {
+            alert(error)
+          });
+      } else {
+        alert("email not matched");
+      }
+    } else {
+      alert("fill all details");
+    }
+  };
 
   return (
     <>
@@ -53,9 +95,9 @@ export const Profile = () => {
             <div className={styles.signin}>
               <h2>SIGN IN</h2>
               <p>If you already have an account with us, sign in below</p>
-              <form onSubmit={(e)=>handleLogin(e)}>
+              <form onSubmit={(e) => handleLogin(e)}>
                 <label htmlFor="mail">Email Address</label>
-                <input type="text" name="mail" id="mail" />
+                <input type="email" name="mail" id="mail" />
                 <label htmlFor="password">Password</label>
                 <div className={styles.passDiv}>
                   <input type={inpuType} name="password" id="pass" />
@@ -76,9 +118,12 @@ export const Profile = () => {
                     />
                   </div>
                 </div>
-                <Link to="/">
-                <input type="submit" value="SIGN IN"  className={styles.btn} styles={{ width: "20px" }} />
-                </Link>
+                <input
+                  type="submit"
+                  value="SIGN IN"
+                  className={styles.btn}
+                  styles={{ width: "20px" }}
+                />
               </form>
             </div>
             <div className={styles.signup}>
@@ -108,28 +153,31 @@ export const Profile = () => {
           </div>
           <div className={styles.titleDiv}>Create an Account</div>
           <div className={styles.signupDiv}>
-            
-            <form  onSubmit={(e) => handleSignup(e)}>
-              {data.map((el,i) => {
+            <form onSubmit={(e) => handleSignup(e)}>
+              {data.map((el, i) => {
                 return (
                   <div key={i}>
-                    <label htmlFor="mail">*{el}</label>
-                    <input type="text" name={el} id={el} />
+                    <label htmlFor={el.name}>*{el.label}</label>
+                    <input type="text" name={el.name} id={el.name} />
                   </div>
                 );
               })}
               <div>
-              <label htmlFor="password">*Password</label>
-              <div className={styles.passDiv}>
-                <input type={inpuType} name="password" id="password" />
-                {toggle ? (
-                  <div onClick={() => handleClick(false)}>SHOW</div>
-                ) : (
-                  <div onClick={() => handleClick(true)}>HIDE</div>
-                )}
+                <label htmlFor="password">*Password</label>
+                <div className={styles.passDiv}>
+                  <input type={inpuType} name="password" id="password" />
+                  {toggle ? (
+                    <div onClick={() => handleClick(false)}>SHOW</div>
+                  ) : (
+                    <div onClick={() => handleClick(true)}>HIDE</div>
+                  )}
+                </div>
               </div>
-              </div>
-              <input  type="submit" className={styles.btn} value="CREATE AN ACCOUNT"/>
+              <input
+                type="submit"
+                className={styles.btn}
+                value="CREATE AN ACCOUNT"
+              />
             </form>
           </div>
           <div className={styles.lastDiv}>

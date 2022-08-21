@@ -10,7 +10,7 @@ const Otp = () => {
   return (
     <div className={styles.containerOtp}>
       <div>
-        <h2>Welcome, USERNAME(FATCH NAME HERE) </h2>
+        <h2>Welcome, AnupamKumar@45 </h2>
         <h2>
           <IoMdLock />
           Let's keep your account secure
