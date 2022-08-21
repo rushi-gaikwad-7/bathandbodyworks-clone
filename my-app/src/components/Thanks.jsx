@@ -11,7 +11,7 @@ const Thanks = () => {
        
          
           <p>
-            <strong>Please check your email</strong> for further instructions.
+            <strong>Please check your email!</strong> for further instructions.
           </p>
 
           <p>

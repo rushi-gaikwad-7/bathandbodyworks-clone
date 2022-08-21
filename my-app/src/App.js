@@ -1,5 +1,4 @@
 
-
 import MainRoutes from "./Routes/MainRoutes";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
