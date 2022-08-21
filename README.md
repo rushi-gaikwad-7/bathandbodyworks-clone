@@ -11,7 +11,7 @@ A Collaborative project built by a team of 6 executed in 7 days.
 
 ## Demo  🎥
 
-- Deployed Link:- [Enjoy the Experience](https://singular-kleicha-5eef4a.netlify.app/)
+- Deployed Link:- [Enjoy the Experience](https://clone-of-bathandbodyworks.netlify.app/)
 
 In the project directory, you can run:
 
