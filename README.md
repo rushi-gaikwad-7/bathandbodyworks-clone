@@ -44,8 +44,9 @@ See the section about deployment for more information.
 
 ## Features ✨
 
-- Authentication process undercover with Local Storage.
-- Pagination for each category with working mega dropdown.
+- Authentication process undercover with Masai Authentication api.
+- Navigation bar with category dropdown
+- Add to cart/Add to wishlist
 - Dynamic Products, Wishlist page using locally created json data.
 - All the product description, prices, discounts, are updated in real time.
 
@@ -56,7 +57,6 @@ See the section about deployment for more information.
 - Developed user authentication.
 - Integrated recommendation slider in all product page.
 - Taken responsibility of project.
-- Made the description page and address page dynamic.
 - Linked all the pages using routes and protected routes
 
 ## Snap Shots 📷
