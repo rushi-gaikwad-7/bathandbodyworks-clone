@@ -3,7 +3,7 @@
 
 BathBodyWorks is a popular American Brand. BathBodyWorks is a retail store chain which came in Ecommerce buisness to sell their products. This Company sells products like lotions, soap, daily perfumes,candles,etc. This company's name itself gives an idea about their products. This Company is an Unicorn Company, and It is globally connected. 
 
-A Collaborative project built by a team of 6 executed in 7 days.
+A Collaborative project built by a team of 5 executed in 7 days.
 
 
 ![Logo](https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/Sites-BathAndBodyWorks-Site/-/default/dw3c999621/images/svg-icons/Logos-main.svg?yocs=o_s_)
@@ -37,10 +37,10 @@ See the section about deployment for more information.
 - HTML5
 - CSS3
 - JAVASCRIPT
-
-## Libraries ##
 - React
 - Redux
+- JSON server
+- Styled components
 
 ## Features ✨
 
@@ -51,12 +51,11 @@ See the section about deployment for more information.
 
 ## Responsibilities 💪
 
-- Built Product page where mapped all the relevant products data.
-- Added sorts and filters on the product page.
-
-- Built the cart page and added functionalities like increase or decrease quantity 
-of products and also remove products from cart.
-
+- Built Home page with big dropdown for navigation.
+- Developed a navigation bar and footer.
+- Developed user authentication.
+- Integrated recommendation slider in all product page.
+- Taken responsibility of project.
 - Made the description page and address page dynamic.
 - Linked all the pages using routes and protected routes
 
@@ -77,8 +76,13 @@ of products and also remove products from cart.
 
 ## Contributors  😇
 
-
+- 👤 [Rushikesh Gaikwad](https://github.com/rushig777)
 - 👤 [Anupam kumar](https://github.com/hlv-kakashi)
+- 👤 [Anand biniya](https://github.com/Anandbiniya)
+- 👤 [Gajraj shekhawat](https://github.com/Gajraj-shekhawat)
+- 👤 [Vivek kumar](https://github.com/vivekkumar1994)
+
+
 
 
 
