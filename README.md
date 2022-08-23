@@ -1,7 +1,7 @@
 
 # BathBodyWorks - (Clone)
 
-BathBodyWorks is a popular American Brand. BathBodyWorks is a retail store chain which came in Ecommerce buisness to sell their products. This Company sells products like lotions, soap, daily perfumes,candles,etc. This company's name itself gives an idea about their products. This Company is an Unicorn Company, and It is globally connected. 
+BathBodyWorks is a popular American Brand. BathBodyWorks is a retail store chain which came in E-commerce business to sell their products. This Company sells products like lotions, soap, daily perfumes,candles,etc. This company's name itself gives an idea about their products. This Company is an Unicorn Company, and It is globally connected. 
 
 A Collaborative project built by a team of 5 executed in 7 days.
 
