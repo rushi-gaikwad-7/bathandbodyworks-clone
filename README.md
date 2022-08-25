@@ -8,7 +8,6 @@ A Collaborative project built by a team of 5 executed in 7 days.
 
 ![Logo](https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/Sites-BathAndBodyWorks-Site/-/default/dw3c999621/images/svg-icons/Logos-main.svg?yocs=o_s_)
 
-
 ## Demo  🎥
 
 - Deployed Link:- [Enjoy the Experience](https://clone-of-bathandbodyworks.netlify.app/)
